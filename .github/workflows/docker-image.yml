@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: azitmentor/atishop.uiadmin
       - run: sudo kubectl apply -f deploy/deployment.yml
-      - run: sudo kubectl rollout restart deploy/atishopuiadmin
+      - run: sudo kubectl rollout restart deploy/atishopuiadmin -n atishop
       # - name: ActionKubeCtl Test
       #   uses: actions-hub/kubectl@master
       #   env:

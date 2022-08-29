@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="App">
+      Product data:
       <table className="table table striped">
         <tbody>
           {data.map((o: any) => {
