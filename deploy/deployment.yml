@@ -2,7 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: atishopuiadmin
-  namespace: default
+  namespace: atishop
   labels:
     app: atishopuiadmin
   annotations:
@@ -31,7 +31,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: atishopuiadmin-service
-  namespace: default
+  namespace: atishop
   labels:
     app: atishopuiadmin
 spec:
@@ -45,14 +45,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: atishopuiadmin-ingress
-  namespace: default
+  namespace: atishop
   annotations:
     kubernetes.io/ingress.class: "traefik"
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
 
   rules:
-    - host: uiadmin.laky.ovh
+    - host: admin.laky.ovh
       http:
         paths:
           - path: /
